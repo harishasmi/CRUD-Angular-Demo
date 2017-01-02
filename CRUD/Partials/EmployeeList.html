@@ -1,0 +1,24 @@
+﻿<h3>List of Employees</h3>
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Age</th>
+        <th>Department</th>
+        
+    </tr>
+    <tr ng-repeat="emp in listOfEmployees">
+        <td>{{emp.Name}}</td>
+        <td>{{emp.Designation}}</td>
+        <td>{{emp.Age}}</td>
+        <td>{{emp.Department}}</td>
+        <td><a href="#!/EditEmployee/{{emp.Id}}">Edit</a></td>
+        <td><a href="#!/" ng-click="DeleteEmployee(emp.Id,$index)">Delete</a></td>
+        <!--Take care of the Arguments to the Delete function-->
+    </tr>
+</table>    
+
+<br />
+<a href="#!/AddEmployee">Add a Employee</a>
